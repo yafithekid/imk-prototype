@@ -1,0 +1,12 @@
+/* Font stack */
+body
+{
+	font-family: 'Segoe UI', 'Segoe', 'Optima', sans-serif;
+}
+
+/* Ruang untuk navbar-fixed-top dan navbar-fixed-bottom */
+body
+{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
