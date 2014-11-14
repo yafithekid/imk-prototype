@@ -49,38 +49,27 @@ function navbar_top() {
 			<br>
 			<form class="form-horizontal" role="form"> 
 				<div class="form-group">
-					<label for="inputNama" class="col-sm-2 control-label">Nama Pengirim</label>
+					<label for="editNama" class="col-sm-2 control-label">Nama Pengirim</label>
 					<div class="col-sm-3">
 	      				<input type="Nama" class="form-control" id="inputNama">
 	    			</div>
 				</div>
 				<div class="form-group">
-					<label for="inputBantuan" class="col-sm-2 control-label">Bantuan</label>
+					<label for="editBantuan" class="col-sm-2 control-label">Bantuan</label>
 					<div class="col-sm-3">
 	      				<input type="Bantuan" class="form-control" id="inputBantuan">
 	    			</div>
 				</div>
 				<div class="form-group">
-					<label for="inputJumlah" class="col-sm-2 control-label">Jumlah</label>
+					<label for="editJumlah" class="col-sm-2 control-label">Jumlah</label>
 					<div class="col-sm-3">
 	      				<input type="Jumlah" class="form-control" id="inputJumlah">
 	    			</div>
 				</div>
 				<div class="form-group">
-					<label for="inputDaerah" class="col-sm-2 control-label">Daerah Tujuan</label>
-					<div class="col-sm-3">
-						<select class="form-control">
-						  <option>Bandung</option>
-						  <option>Jakarta</option>
-						  <option>Medan</option>
-						  <option>Lampung</option>
-						  <option>Aceh</option>
-						</select>
-	    			</div>
-				</div>
-				<div class="form-group">
 				    <div class="col-sm-offset-2 col-sm-10">
-				    	<a href="bantuan.php" type="button" class="btn btn-default">Add</a>
+				    	<a href="bantuan.php" type="button" class="btn btn-primary">Save Changes</a>
+				    	<a href="bantuan.php" type="button" class="btn btn-default">Cancel</a>
 					</div>
 				</div>
 			</form>
