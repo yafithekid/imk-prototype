@@ -13,7 +13,6 @@ $bottom = array(
 	),
 );
 
-
 function navbar_top() {
 ?>
 <ul class="nav navbar-nav">
@@ -38,27 +37,6 @@ function navbar_top() {
 }
 
 ?>
-
-<?php 
-$bantuan = [
-	[
-		'nama' => 'Munir',
-		'bantuan' => 'Pakaian',
-		'jumlah' => '36',
-	],
-
-	[
-		'nama' => 'Riska',
-		'bantuan' => 'Mi Instan',
-		'jumlah' => '120',
-	],
-		[
-		'nama' => 'Viktor',
-		'bantuan' => 'Pakaian',
-		'jumlah' => '12',
-	],
-];
-?>
 <!DOCTYPE html>
 <html lang="id">
 	<head>
@@ -70,7 +48,6 @@ $bantuan = [
 		<div class="container-fluid">
 			<br>
 			<form class="form-inline" role="form"> 
-				<div class="col-xs-offset-2">
 				Daerah Tujuan
 				<select class="form-control">
 				  <option>Bandung</option>
@@ -80,133 +57,33 @@ $bantuan = [
 				  <option>Aceh</option>
 				</select>
 				<a href="addbantuan.php" type="button" class="btn btn-default">Add</a>
-				</div>
+				<button type="button" class="btn btn-default">Delete</button>
 			</form>
 			<br>
 		</div>
 		
 		<div class="container-fluid table-responsive">
-			<div class="col-xs-8 col-xs-offset-2">
-				<table class="table table-striped">
-					<thead>
-				        <tr>
-				        	<th data-field="no">No</th>
-				            <th data-field="nama"><a href ="#">Nama Pengirim</a></th>
-				            <th data-field="bantuan"><a href ="#">Bantuan</a></th>
-				            <th data-field="jumlah"><a href ="#">Jumlah</a></th>
-				            <th data-field="action"><a href ="#">Action</a></th>
-				        </tr>
-				    </thead>
-				    <tbody>
-				    	<tr id="tr1" class="tr-class-1">
-							<?php $id = 0;
-							foreach ($bantuan as $bantuan) : $id++;?>
-							<tr id="column-<?=$id;?>">
-								<td><?=$id;?></td>
-								<td><?=$bantuan['nama'];?></td>
-								<td><?=$bantuan['bantuan'];?></td>
-								<td><?=$bantuan['jumlah'];?></td>
-								<td>
-									<a href='bantuan-edit.php'><span class='glyphicon glyphicon-pencil'></span></a>
-									<a href='#' class='delete' rel="<?=$id?>"><span class='glyphicon glyphicon-trash'></span></a>
-								</td>
-							</tr>
-							<tr id="pop-delete-<?=$id;?>" style="display:none">
-								<td></td>
-								<td></td>
-								<td></td>
-								<td>Hapus bantuan ?</td>
-								<td>
-								<button class='btn btn-danger confirm-delete' rel='<?=$id;?>'>Ya</button>
-								<button class='btn btn-primary reject-delete' rel='<?=$id;?>'>Tidak</button>
-								</td>
-							</tr>
-							<?php endforeach; ?>
-				    	</tr>
-				    </tbody>
-				</table>
-			</div>
+			<table class="table table-hover">
+				<thead>
+			        <tr>
+			            <th data-field="nama">Nama Pengirim</th>
+			            <th data-field="bantuan">Bantuan</th>
+			            <th data-field="jumlah">Jumlah</th>
+			        </tr>
+			    </thead>
+			    <tbody>
+			    	<tr id="tr1" class="tr-class-1">
+			    		<td>Munir</td>
+			    		<td>Pakaian</td>
+			    		<td>36</td>
+			    	</tr>
+			    </tbody>
+			</table>
 		</div>
 
-		<div class="modal fade" id="editmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		  <div class="modal-dialog">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-		        <h4 class="modal-title" id="myModalLabel">Edit</h4>
-		      </div>
-		      <div class="modal-body">
-		        <div class="container-fluid">
-					<br>
-					<form class="form-horizontal" role="form"> 
-						<div class="form-group">
-							<label for="inputNama" class="col-sm-2 control-label">Nama</label>
-							<div class="col-sm-5">
-			      				<input type="Nama" class="form-control" id="inputNama">
-			    			</div>
-						</div>
-						<div class="form-group">
-							<label for="inputBantuan" class="col-sm-2 control-label">Bantuan</label>
-							<div class="col-sm-5">
-			      				<input type="Bantuan" class="form-control" id="inputBantuan">
-			    			</div>
-						</div>
-						<div class="form-group">
-							<label for="inputJumlah" class="col-sm-2 control-label">Jumlah</label>
-							<div class="col-sm-5">
-			      				<input type="Jumlah" class="form-control" id="inputJumlah">
-			    			</div>
-						</div>
-					</form>
-					<br>
-				</div>
-		      </div>
-		      <div class="modal-footer">
-		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		        <button type="button" class="btn btn-primary">Save changes</button>
-		      </div>
-		    </div>
-		  </div>
-		</div>
-
-		<div class="modal fade" id="deletemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		  <div class="modal-dialog">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		      	<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-		        <h4 class="modal-title" id="myModalLabel">Hapus Bantuan</h4>
-		      </div>
-		      <div class="modal-body">
-		        Yakin ingin menghapus ?
-		      </div>
-		      <div class="modal-footer">
-		      	<button type="button" class="btn btn-danger">Yes</button>
-		        <button type="button" class="btn btn-primary" data-dismiss="modal">No</button>
-		      </div>
-		    </div>
-		  </div>
-		</div>		
+		
 		<?php include 'parts/bottom.php' ?>
 
 		<?php include 'parts/foot.php' ?>
 	</body>
-
-<script type="text/javascript">
-	$(".delete").click(function(){
-		var id = $(this).attr('rel');
-		$("#pop-delete-"+id).show();
-	});
-
-	$(".confirm-delete").click(function(){
-		var id = $(this).attr('rel');
-		
-		$("#column-"+id).hide();
-		$("#pop-delete-"+id).hide();
-	});
-
-	$(".reject-delete").click(function(){
-		var id = $(this).attr('rel');
-		$("#pop-delete-"+id).hide();
-	});
-</script>
 </html>

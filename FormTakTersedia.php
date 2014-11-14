@@ -21,7 +21,7 @@ function navbar_top() {
 	<li class = "active"><a href="#"><span class="glyphicon glyphicon-question-sign"></span> Bantuan Tidak Terdaftar</a></li>
 </ul>
 <ul class="nav navbar-nav navbar-right">
-	<li><a href="#">Link</a></li>
+	
 	<li class="dropdown">
 		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Kategori <span class="caret"></span></a>
 		<ul class="dropdown-menu" role="menu">
@@ -79,19 +79,22 @@ function navbar_top() {
 	</nav>
 	
 	<div class="container">
+
 	<h2><i>Request </i>Bantuan</h2>
 		<br><br>
-	<div class = "col-xs-8 col-xs-offset-2">
-	<form method="#" action="ViewAids.php">
+	<div class = "col-xs-4 col-xs-offset-2">
+	<form method="POST" action="ViewAids.php">
 	  <label for="Nama Bantuan">Nama Bantuan:</label> <br>
-      <input type="text" name="Nama Bantuan"> <br><br>
+      <input type="text" name="Nama Bantuan" class = "form-control"> <br>
       <label for="Jumlah">Jumlah:</label> <br>
-      <input type="text" name="Jumlah"> <br><br>
+      <input type="text" name="Jumlah" class = "form-control"> <br>
       <label for="Lokasi">Lokasi:</label> <br>
-      <input type="text" name="Lokasi"> <br><br>
+      <input type="text" name="Lokasi" class = "form-control"> <br>
       <label for="Penanggungjawab">Penanggungjawab:</label><br>
-      <input type="text" name="Penanggungjawab" id="Penanggungjawab" class = "form-control"> <br><br>
-      <input type="submit" name="submit" value="SUBMIT" class="submit-button">
+      <input type="text" name="Penanggungjawab" id="Penanggungjawab" class = "form-control"> <br>
+      <input type="submit" name="submit" value="SUBMIT" class="btn btn-primary">
+	  
+	  <input type="hidden" name="message" value="Request terkirim" >
 	</form>
     </div>
 	</div>
