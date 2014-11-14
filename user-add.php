@@ -9,16 +9,15 @@ $bottom = array(
 	'user_menu' => array(
 		'<span class="glyphicon glyphicon-search"></span> Buka Google' => 'http://www.google.com',
 		'<span class="glyphicon glyphicon-plane"></span> Iseng' => 'http://www.nyaa.eu',
-		'<span class="glyphicon glyphicon-off"></span> Log Out' => '#',
+		'<span class="glyphicon glyphicon-off"></span> Log Out' => 'login.php',
 	),
 );
 
 function navbar_top() {
 ?>
 <ul class="nav navbar-nav">
-	<li class="active"><a href="#"><span class="glyphicon glyphicon-globe"></span> Peta</a></li>
-	<li><a href="#"><span class="glyphicon glyphicon-search"></span> Cari</a></li>
-	<li><a href="#"><span class="glyphicon glyphicon-th-list"></span> <i>Tracking</i> Bantuan</a></li>
+	<li class='active'><a href="user-add.php"><span class="glyphicon glyphicon-user"></span> Tambah Pengguna</a></li>
+	<li><a href="user-index.php"><span class="glyphicon glyphicon-th-list"></span> Daftar Pengguna</a></li>
 </ul>
 <ul class="nav navbar-nav navbar-right">
 	<li><a href="#">Link</a></li>

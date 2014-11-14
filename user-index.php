@@ -8,16 +8,15 @@ $bottom = array(
 	'user_menu' => array(
 		'<span class="glyphicon glyphicon-search"></span> Buka Google' => 'http://www.google.com',
 		'<span class="glyphicon glyphicon-plane"></span> Iseng' => 'http://www.nyaa.eu',
-		'<span class="glyphicon glyphicon-off"></span> Log Out' => '#',
+		'<span class="glyphicon glyphicon-off"></span> Log Out' => 'login.php',
 	),
 );
 
 function navbar_top() {
 ?>
 <ul class="nav navbar-nav">
-	<li class="active"><a href="#"><span class="glyphicon glyphicon-globe"></span> Peta</a></li>
-	<li><a href="#"><span class="glyphicon glyphicon-search"></span> Cari</a></li>
-	<li><a href="#"><span class="glyphicon glyphicon-th-list"></span> <i>Tracking</i> Bantuan</a></li>
+	<li ><a href="user-add.php"><span class="glyphicon glyphicon-user"></span> Tambah Pengguna</a></li>
+	<li class='active'><a href="user-index.php"><span class="glyphicon glyphicon-th-list"></span> Daftar Pengguna</a></li>
 </ul>
 <ul class="nav navbar-nav navbar-right">
 	<li><a href="#">Link</a></li>
@@ -66,6 +65,16 @@ $data = [
 	<?php require "parts/top.php"; ?>
 <div class="container">
 	<h1>Daftar Pengguna</h1><br>
+	<div class="col-xs-offset-6">
+	<div class='col-xs-4' style='padding-right:0px;'>
+		    <input type="text" class="form-control" placeholder='search'>
+	</div>
+	
+	<div class='col-xs-2' style='padding-left:0px;'><button class="btn btn-default" type="button" style='height:34px;' >
+		        	<span class='glyphicon glyphicon-search'></span>
+		        </button></div>
+	</div><br>
+	<br><br>
 	<div class="col-xs-8 col-xs-offset-2">
 		<table class='table table-striped'>
 			<tr>
