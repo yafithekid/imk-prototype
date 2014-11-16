@@ -17,23 +17,8 @@ function navbar_top() {
 ?>
 
 <ul class="nav navbar-nav">
-	<li class="active"><a href="ViewAids.php"><span class="glyphicon glyphicon-th-list"></span> Daftar Bantuan</a></li>
+	<li class="active"><a href="Viewmap.php"><span class="glyphicon glyphicon-th-list"></span> Lihat kondisi</a></li>
 	<li><a href="#"><span class="glyphicon glyphicon-search"></span> Cari</a></li>
-	<li><a href="FormTakTersedia.php"><span class="glyphicon glyphicon-question-sign"></span> Bantuan Tidak Terdaftar</a></li>
-</ul>
-<ul class="nav navbar-nav navbar-right">
-	<li class="dropdown">
-		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Kategori <span class="caret"></span></a>
-		<ul class="dropdown-menu" role="menu">
-			<li><a href="#">Sandang</a></li>
-			<li><a href="Pangan.php">Pangan</a></li>
-			<li><a href="#">Logistik</a></li>
-			<li><a href="#">Obat-obatan</a></li>
-			<li><a href="#">SDM</a></li>
-			<li><a href="#">Sembako</a></li>
-			<li><a href="#"></a></li>
-		</ul>
-	</li>
 </ul>
 <?php
 }
@@ -44,16 +29,18 @@ function navbar_top() {
 <html>
 <head>
 	<?php require 'parts/head.php' ?>
+
 </head>
 <body>
 	<?php require 'parts/top.php' ?>
-	
-	<iframe
+	<!--<iframe
 		frameborder="0" style="border:0;height:720px;width:100%"
 		src="https://www.google.com/maps/embed/v1/view?zoom=5&center=-6.1750,116.8283&key=AIzaSyCWMbQiZaicSm3SEr_-Po41C5QOgNCk6k0"
-		>
-	</iframe>
-
+	>
+	</iframe> -->
+	<div class="container">
+		<img src="https://maps.googleapis.com/maps/api/staticmap?center=-2,116.8283&size=640x294&zoom=4&scale=2&markers=color:yellow|-5.776426,104.968878&markers=color:yellow|-6.060548,105.968634&markers=color:red|-3.202780,107.616583" alt="map" width="100%" height="100%">
+	</div>
 	<?php require 'parts/bottom.php' ?>
 
 	<?php require 'parts/foot.php' ?>
